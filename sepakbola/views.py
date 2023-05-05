@@ -20,7 +20,7 @@ def show_peminjaman_stadium(request):
     context = {
         'last_login': request.COOKIES['last_login'],
     }
-    return render(request, "home.html", context)
+    return render(request, "peminjaman_stadium.html", context)
 
 def register(request):
     form = UserCreationForm()
