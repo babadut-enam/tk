@@ -10,16 +10,20 @@ from django.contrib import messages
 def show_home(request):
     context = {
         'nama': 'Daffa',
-        'last_login': request.COOKIES['last_login'],
     }
     return render(request, "home.html", context)
 
 @login_required(login_url='/sepakbola/login/')
 def show_peminjaman_stadium(request):
     context = {
-        'last_login': request.COOKIES['last_login'],
     }
-    return render(request, "peminjaman_stadium.html", context)
+    return render(request, "pages/peminjaman_stadium.html", context)
+
+@login_required(login_url='/sepakbola/login/')
+def show_dashboard(request):
+    context = {
+    }
+    return render(request, "dashboard.html", context)
 
 def register(request):
     form = UserCreationForm()
@@ -41,7 +45,7 @@ def login_user(request):
         user = authenticate(request, username=username, password=password)
         if user is not None:
             login(request, user) # melakukan login terlebih dahulu
-            response = HttpResponseRedirect(reverse("sepakbola:home")) # membuat response
+            response = HttpResponseRedirect(reverse("sepakbola:dashboard")) # membuat response
             response.set_cookie('last_login', str(datetime.datetime.now())) # membuat cookie last_login dan menambahkannya ke dalam response
             return response
         else:
