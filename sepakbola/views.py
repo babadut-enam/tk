@@ -7,7 +7,6 @@ from django.contrib.auth import authenticate, login, logout
 from django.contrib.auth.decorators import login_required
 from django.contrib import messages
 
-@login_required(login_url='/sepakbola/login/')
 def show_home(request):
     context = {
         'nama': 'Daffa',
