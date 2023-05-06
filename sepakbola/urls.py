@@ -1,5 +1,5 @@
 from sepakbola.views import show_home, register, login_user, logout_user
-from sepakbola.views import show_peminjaman_stadium, show_dashboard
+from sepakbola.views import show_peminjaman_stadium, show_dashboard, show_form_peminjaman_stadium
 from django.urls import path
 
 app_name = 'sepakbola'
@@ -11,4 +11,5 @@ urlpatterns = [
     path('logout/', logout_user, name='logout'),
     path('dashboard/', show_dashboard, name='dashboard'),
     path('peminjaman-stadium/', show_peminjaman_stadium, name='peminjaman_stadium'),
+    path('form-peminjaman-stadium/', show_form_peminjaman_stadium, name='form_peminjaman_stadium'),
 ]
