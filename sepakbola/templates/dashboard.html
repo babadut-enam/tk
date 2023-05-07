@@ -1,5 +1,13 @@
 {% extends 'base.html' %}
 
+{% load static %}
+
+{% block meta %}
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="{% static 'css/dashboard.css' %}">
+    {% include 'navbar.html' %}
+{% endblock meta %}
+
 {% block content %}
 <section class="vh-100 bg-image">
     <div class="mask d-flex align-items-center h-100 gradient-custom-3">
@@ -13,11 +21,8 @@
 
                     <h2 class="fw-bold mb-2 text-uppercase">BABADU - 6</h2>
                     <p class="text-black-50 mb-5">Welcome to our website!</p>
-
-                        <a class="btn btn-outline-secondary" href="{% url 'sepakbola:login' %}" type="button" value="Login">Login</a>
-                        <a class="btn btn-outline-secondary" href="{% url 'sepakbola:register' %}" type="button" value="Register">Register</a>  
     
-                    </div>
+                </div>
               </div>
             </div>
           </div>
@@ -25,5 +30,5 @@
       </div>
     </div>
   </section>
-
+  {% include 'footer.html' %}
 {% endblock content %}
