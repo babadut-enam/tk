@@ -17,7 +17,7 @@ def show_home(request):
 def show_manage_pertandingan(request):
     context = {
     }
-    return render(request, "pages/manage_pertandingan.html", context)
+    return render(request, "pages/manage-pertandingan.html", context)
 
 #@login_required(login_url='/sepakbola/login/')
 def show_peminjaman_stadium(request):
