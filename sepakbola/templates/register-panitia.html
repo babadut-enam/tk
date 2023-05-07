@@ -23,28 +23,56 @@
                 <p class="text-black-50 mb-5">Please enter a new username and a password!</p>
 
                 <form method="POST">
-                    {% csrf_token %}  
-                    <div class="form-outline mb-4">
-                        <input type="text" id="id_username" name="username" maxlength="150" autocapitalize="none" autocomplete="id_username" autofocus required id="id_username" class="form-control form-control-lg" placeholder="Username"/>
-                    </div>
+                  {% csrf_token %}  
+                  <div class="form-outline mb-4">
+                      <input type="text" id="id_username" name="username" maxlength="150" autocapitalize="none" autocomplete="id_username" autofocus required id="id_username" class="form-control form-control-lg" placeholder="Username"/>
+                  </div>
 
-                    <div class="form-outline mb-4">
-                        <input type="password" id="id_password1" name="password1" autocomplete="new-password" required id="id_password1" class="form-control form-control-lg" placeholder="Password"/>
-                    </div>
+                  <div class="form-outline mb-4">
+                      <input type="password" id="id_password1" name="password1" autocomplete="new-password" required id="id_password1" class="form-control form-control-lg" placeholder="Password"/>
+                  </div>
 
-                    <div class="form-outline mb-4">
-                        <input type="password" id="id_password2" name="password2" autocomplete="new-password" required id="id_password2" class="form-control form-control-lg" placeholder="Confirm Password"/>
-                    </div>
+                  <div class="form-outline mb-4">
+                      <input type="password" id="id_password2" name="password2" autocomplete="new-password" required id="id_password2" class="form-control form-control-lg" placeholder="Confirm Password"/>
+                  </div>
 
-                    <div class="d-flex justify-content-center">
-                        <button type="submit" name="submit" value="Daftar"
-                        class="btn btn-outline-secondary">Register</button>
-                    </div>
+                  <div class="form-outline mb-4">
+                    <input type="text" id="id_nama_depan" name="nama_depan" required id="id_nama_depan" class="form-control form-control-lg" placeholder="Nama Depan"/>
+                  </div>
 
-                    <p class="text-center text-muted mt-5 mb-0">Already have an account? <a href="{% url 'sepakbola:login' %}"
-                        class="fw-bold text-body"><u>Login here</u></a></p>
+                  <div class="form-outline mb-4">
+                    <input type="text" id="id_nama_belakang" name="nama_belakang" required id="id_nama_belakang" class="form-control form-control-lg" placeholder="Nama Belakang"/>
+                  </div>
 
-                </form>
+                  <div class="form-outline mb-4">
+                    <input type="number" id="id_nomor_hp" name="nomor_hp" required id="id_nomor_hp" class="form-control form-control-lg" placeholder="Nomor HP"/>
+                  </div>
+
+                  <div class="form-outline mb-4">
+                    <input type="text" id="id_email" name="email" required id="id_email" class="form-control form-control-lg" placeholder="Email"/>
+                  </div>
+
+                  <div class="form-outline mb-4">
+                    <input type="text" id="id_alamat" name="alamat" required id="id_alamat" class="form-control form-control-lg" placeholder="Alamat"/>
+                  </div>
+
+                  <div class="d-flex justify-content-center mb-4">
+                    {{form.status}}
+                  </div>
+
+                  <div class="form-outline mb-4">
+                    <input type="text" id="id_jabatan" name="jabatan" class="form-control form-control-lg" placeholder="Jabatan"/>
+                  </div>
+
+                  <div class="d-flex justify-content-center">
+                      <button type="submit" name="submit" value="Daftar"
+                      class="btn btn-outline-secondary">Register</button>
+                  </div>
+
+                  <p class="text-center text-muted mt-5 mb-0">Already have an account? <a href="{% url 'sepakbola:login' %}"
+                      class="fw-bold text-body"><u>Login here</u></a></p>
+
+              </form>
                 {% if messages %}  
                 <ul>   
                     {% for message in messages %}  
