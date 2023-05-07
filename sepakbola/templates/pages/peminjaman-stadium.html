@@ -5,7 +5,7 @@
 {% block meta %}
     <title>Peminjaman Stadium</title>
     <link rel="stylesheet" href="{% static 'css/peminjaman_stadium.css' %}">
-    {% include 'navbar.html' %}
+    {% include 'navbar/navbar-manajer.html' %}
 {% endblock meta %}
 
 {% block content %}
@@ -38,7 +38,7 @@
                             </tr>
                         </tbody>
                     </table>
-                    <a class="btn btn-outline-secondary mt-5" href="{% url 'sepakbola:form_peminjaman_stadium' %}" type="button" value="Pesan">Pesan</a> 
+                    <a class="btn btn-outline-secondary mt-5" href="{% url 'sepakbola:form-peminjaman-stadium' %}" type="button" value="Pesan">Pesan</a> 
                 </div>
               </div>
             </div>
@@ -47,6 +47,6 @@
       </div>
     </div>
   </section>
-  <script type="text/javascript" src="{% static 'js/login.js' %}"></script>
+  <script type="text/javascript" src=""></script>
   {% include 'footer.html' %}
   {% endblock content %}
