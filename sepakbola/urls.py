@@ -1,6 +1,7 @@
 from sepakbola.views import show_home, register, login_user, logout_user
-from sepakbola.views import show_peminjaman_stadium, show_dashboard, show_form_peminjaman_stadium, show_mengelola_tim
-from sepakbola.views import register_manajer_penonton, register_panitia
+from sepakbola.views import show_peminjaman_stadium, show_dashboard, show_form_peminjaman_stadium, show_mengelola_tim, show_manage_pertandingan
+from sepakbola.views import register_manajer_penonton, register_panitia, show_list_pertandingan
+from sepakbola.views import show_history_rapat
 from django.urls import path
 
 app_name = 'sepakbola'
