@@ -25,7 +25,7 @@ def show_form_peminjaman_stadium(request):
     }
     return render(request, "pages/form_peminjaman_stadium.html", context)
 
-@login_required(login_url='/sepakbola/login/')
+# @login_required(login_url='/sepakbola/login/')
 def show_dashboard(request):
     context = {
     }

@@ -9,26 +9,89 @@
 {% endblock meta %}
 
 {% block content %}
-<section class="vh-100 bg-image">
-    <div class="mask d-flex align-items-center h-100 gradient-custom-3">
-      <div class="container h-100">
-        <div class="row d-flex justify-content-center align-items-center h-100">
-          <div class="col-12 col-md-9 col-lg-7 col-xl-6">
-            <div class="card" style="border-radius: 15px;">
-              <div class="card-body p-5 text-center">
 
-                <div class="mb-md-5 mt-md-4">
+<body onload="document.getElementById('profil-link').click()">
+<section class="vh-100 d-flex align-items-start">
+<!--sidebar-->
+<div class="px-4 mt-4">
+<div class="col-sm-2 card d-flex flex-column flex-shrink-0 p-3" style="width: 280px;">
+  <ul class="nav nav-pills flex-column mb-auto">
+    <li class="nav-item">
+      <a href="#profil" class="nav-link" onclick="showContent('profil')" id="profil-link">
+        <svg class="bi me-2" width="16" height="16"><use xlink:href="#people-circle"></use></svg>
+        profile
+      </a>
+    </li>
+    <hr></hr>
+    <li>
+      <a href="#tim" class="nav-link" onclick="showContent('tim')" id="tim-link">
+        <svg class="bi me-2" width="16" height="16"><use xlink:href="#grid"></use></svg>
+        teams
+      </a>
+    </li>
+  </ul>
+</div>
+</div>
+<!--card content-->
+<div class="mask col-sm-10 d-flex align-items-center">
+  <div class="container h-100">
+    <div class="row d-flex justify-content-center align-items-center h-100 mt-4">
+      <div class="col-12 col-md-9 col-lg- col-xl-9">
+        <div class="card" style="border-radius: 15px;">
+          <div class="card-body p-3">
+            <div class="mb-md-4 mt-md-4" id="profil">
 
-                    <h2 class="fw-bold mb-2 text-uppercase">BABADU - 6</h2>
-                    <p class="text-black-50 mb-5">Welcome to our website!</p>
-    
-                </div>
-              </div>
+                <h2 class="fw-bold mb-2 text-center">Your Profile</h2>
+                <p class="text-black-50 mb-2 fw-bold">Nama Depan </p>
+                <p class="text-black-50 mb-2">Jingga </p>
+                <p class="text-black-50 mb-2 fw-bold">Nama Belakang </p>
+                <p class="text-black-50 mb-2">Mentari </p>
+                <p class="text-black-50 mb-2 fw-bold">Nomor HP </p>
+                <p class="text-black-50 mb-2">08123456789 </p>
+                <p class="text-black-50 mb-2 fw-bold">Email </p>
+                <p class="text-black-50 mb-2">vladijm@gmail.com </p>
+                <p class="text-black-50 mb-2 fw-bold">Alamat </p>
+                <p class="text-black-50 mb-2">Jl. Wortel A1/23 BSD </p>
+                <p class="text-black-50 mb-2 fw-bold">Status </p>
+                <p class="text-black-50 mb-2">Manajer </p>
+
             </div>
+            <div class="mb-md-4 mt-md-4" id="tim">
+
+              <h2 class="fw-bold mb-2 text-center">Tim</h2>
+              <p class="text-black-50 mb-2 fw-bold text-center">Belum membuat Tim </p>
+   
+          </div>
           </div>
         </div>
       </div>
     </div>
-  </section>
-  {% include 'footer.html' %}
+  </div>
+</div>
+</section>
+</body>
+
+{% block scripts %}
+<script>
+    const profilLink = document.getElementById('profil-link');
+    const timLink = document.getElementById('tim-link');
+    const profilContent = document.getElementById('profil');
+    const timContent = document.getElementById('tim');
+
+    profilLink.addEventListener('click', (e) => {
+        e.preventDefault();
+        timContent.style.display = 'none';
+        profilContent.style.display = 'block';
+    });
+
+    timLink.addEventListener('click', (e) => {
+        e.preventDefault();
+        profilContent.style.display = 'none';
+        timContent.style.display = 'block';
+    });
+</script>
+{% endblock %}
+
+
+{% include 'footer.html' %}
 {% endblock content %}
