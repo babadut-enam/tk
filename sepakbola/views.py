@@ -23,13 +23,25 @@ def show_manage_pertandingan(request):
 def show_peminjaman_stadium(request):
     context = {
     }
-    return render(request, "pages/peminjaman_stadium.html", context)
+    return render(request, "pages/peminjaman-stadium.html", context)
 
 #@login_required(login_url='/sepakbola/login/')
 def show_form_peminjaman_stadium(request):
     context = {
     }
-    return render(request, "pages/form_peminjaman_stadium.html", context)
+    return render(request, "pages/form-peminjaman-stadium.html", context)
+
+#@login_required(login_url='/sepakbola/login/')
+def show_list_pertandingan(request):
+    context = {
+    }
+    return render(request, "pages/list-pertandingan.html", context)
+
+#@login_required(login_url='/sepakbola/login/')
+def show_history_rapat(request):
+    context = {
+    }
+    return render(request, "pages/history-rapat.html", context)
 
 #@login_required(login_url='/sepakbola/login/')
 def show_dashboard(request):

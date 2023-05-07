@@ -5,7 +5,7 @@
 {% block meta %}
     <title>Form Peminjaman Stadium</title>
     <link rel="stylesheet" href="">
-    {% include 'navbar.html' %}
+    {% include 'navbar/navbar-manajer.html' %}
 {% endblock meta %}
 
 {% block content %}
@@ -27,9 +27,9 @@
                             Stadium
                         </button>
                         <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="#">Action</a></li>
-                            <li><a class="dropdown-item" href="#">Action two</a></li>
-                            <li><a class="dropdown-item" href="#">Action three</a></li>
+                            <li><a class="dropdown-item" href="#">Gelora Bung Karno</a></li>
+                            <li><a class="dropdown-item" href="#">Bandung Lautan Api</a></li>
+                            <li><a class="dropdown-item" href="#">Pakansari</a></li>
                         </ul>
                     </div>
                     <div class="dropdown-center mt-2">
@@ -55,6 +55,6 @@
       </div>
     </div>
   </section>
-  <script type="text/javascript" src="{% static 'js/login.js' %}"></script>
+  <script type="text/javascript" src="form-peminjaman-stadium.js"></script>
 {% include 'footer.html' %}
 {% endblock content %}
