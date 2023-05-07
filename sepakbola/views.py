@@ -14,6 +14,12 @@ def show_home(request):
     return render(request, "home.html", context)
 
 #@login_required(login_url='/sepakbola/login/')
+def show_manage_pertandingan(request):
+    context = {
+    }
+    return render(request, "pages/manage-pertandingan.html", context)
+
+#@login_required(login_url='/sepakbola/login/')
 def show_peminjaman_stadium(request):
     context = {
     }
@@ -36,6 +42,13 @@ def show_history_rapat(request):
     context = {
     }
     return render(request, "pages/history-rapat.html", context)
+
+#@login_required(login_url='/sepakbola/login/')
+def show_mengelola_tim(request):
+    context = {
+    }
+    return render(request, "pages/mengelola-tim.html", context)
+
 
 #@login_required(login_url='/sepakbola/login/')
 def show_dashboard(request):
