@@ -44,6 +44,19 @@ def show_history_rapat(request):
     return render(request, "pages/history-rapat.html", context)
 
 #@login_required(login_url='/sepakbola/login/')
+def show_mengelola_tim(request):
+    context = {
+    }
+    return render(request, "pages/mengelola-tim.html", context)
+
+
+#@login_required(login_url='/sepakbola/login/')
+def show_dashboard_manajer(request):
+    context = {
+    }
+    return render(request, "dashboard/dashboard-manajer.html", context)
+
+#@login_required(login_url='/sepakbola/login/')
 def show_dashboard(request):
     context = {
     }
