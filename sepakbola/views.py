@@ -32,6 +32,11 @@ def show_dashboard(request):
     return render(request, "dashboard.html", context)
 
 def register(request):
+    context = {
+    }
+    return render(request, "register.html", context)
+
+def register_panitia(request):
     form = UserCreationForm()
 
     if request.method == "POST":
@@ -42,7 +47,20 @@ def register(request):
             return redirect('sepakbola:login')
     
     context = {'form':form}
-    return render(request, 'register.html', context)
+    return render(request, 'register-panitia.html', context)
+
+def register_manajer_penonton(request):
+    form = UserCreationForm()
+
+    if request.method == "POST":
+        form = UserCreationForm(request.POST)
+        if form.is_valid():
+            form.save()
+            messages.success(request, 'Akun telah berhasil dibuat!')
+            return redirect('sepakbola:login')
+    
+    context = {'form':form}
+    return render(request, 'register-manajer-penonton.html', context)
 
 def login_user(request):
     if request.method == 'POST':
