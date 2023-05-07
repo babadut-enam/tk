@@ -1,5 +1,5 @@
 from sepakbola.views import show_home, register, login_user, logout_user
-from sepakbola.views import show_peminjaman_stadium, show_dashboard, show_form_peminjaman_stadium
+from sepakbola.views import show_peminjaman_stadium, show_dashboard, show_form_peminjaman_stadium, show_mengelola_tim
 from sepakbola.views import register_manajer_penonton, register_panitia
 from django.urls import path
 
@@ -13,6 +13,7 @@ urlpatterns = [
     path('login/', login_user, name='login'),
     path('logout/', logout_user, name='logout'),
     path('dashboard/', show_dashboard, name='dashboard'),
+    path('mengelola-tim/', show_mengelola_tim, name='mengelola_tim'),
     path('peminjaman-stadium/', show_peminjaman_stadium, name='peminjaman_stadium'),
     path('form-peminjaman-stadium/', show_form_peminjaman_stadium, name='form_peminjaman_stadium'),
 ]
