@@ -17,4 +17,6 @@ urlpatterns = [
     path('mengelola-tim/', show_mengelola_tim, name='mengelola_tim'),
     path('peminjaman-stadium/', show_peminjaman_stadium, name='peminjaman_stadium'),
     path('form-peminjaman-stadium/', show_form_peminjaman_stadium, name='form_peminjaman_stadium'),
+    path('list-pertandingan/', show_list_pertandingan, name='list-pertandingan'),
+    path('history-rapat/', show_history_rapat, name='history-rapat'),
 ]
