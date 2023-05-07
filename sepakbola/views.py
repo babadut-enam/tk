@@ -19,6 +19,20 @@ def show_manage_pertandingan(request):
     }
     return render(request, "pages/manage-pertandingan.html", context)
 
+# TODO: ini yang bener, sementara ga pake id dulu
+# #@login_required(login_url='/sepakbola/login/')
+# def show_peristiwa_tim(request, id):
+#     context = {
+#         "id": id
+#     }
+#     return render(request, "pages/peristiwa-tim.html", context)
+
+#@login_required(login_url='/sepakbola/login/')
+def show_peristiwa_tim(request):
+    context = {
+    }
+    return render(request, "pages/peristiwa-tim.html", context)
+
 #@login_required(login_url='/sepakbola/login/')
 def show_peminjaman_stadium(request):
     context = {
