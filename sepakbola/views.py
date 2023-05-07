@@ -19,6 +19,12 @@ def show_manage_pertandingan(request):
     }
     return render(request, "pages/manage-pertandingan.html", context)
 
+#@login_required(login_url='/sepakbola/login/')
+def show_pembuatan_pertandingan(request):
+    context = {
+    }
+    return render(request, "pages/pembuatan-pertandingan.html", context)
+
 # TODO: ini yang bener, sementara ga pake id dulu
 # #@login_required(login_url='/sepakbola/login/')
 # def show_peristiwa_tim(request, id):
