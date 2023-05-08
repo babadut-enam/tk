@@ -1,4 +1,5 @@
 import datetime
+from django.views.decorators.csrf import csrf_exempt
 from django.http import HttpResponseRedirect
 from django.urls import reverse
 from django.shortcuts import render, redirect
@@ -13,7 +14,8 @@ def show_home(request):
     }
     return render(request, "home.html", context)
 
-#@login_required(login_url='/sepakbola/login/')
+@csrf_exempt
+@login_required(login_url='/sepakbola/login/')
 def show_manage_pertandingan(request):
     context = {
     }
@@ -51,44 +53,51 @@ def show_peristiwa_tim(request):
     }
     return render(request, "pages/peristiwa-tim.html", context)
 
-#@login_required(login_url='/sepakbola/login/')
+@csrf_exempt
+@login_required(login_url='/sepakbola/login/')
 def show_peminjaman_stadium(request):
     context = {
     }
     return render(request, "pages/peminjaman-stadium.html", context)
 
-#@login_required(login_url='/sepakbola/login/')
+@csrf_exempt
+@login_required(login_url='/sepakbola/login/')
 def show_form_peminjaman_stadium(request):
     context = {
     }
     return render(request, "pages/form-peminjaman-stadium.html", context)
 
-#@login_required(login_url='/sepakbola/login/')
+@csrf_exempt
+@login_required(login_url='/sepakbola/login/')
 def show_list_pertandingan(request):
     context = {
     }
     return render(request, "pages/list-pertandingan.html", context)
 
-#@login_required(login_url='/sepakbola/login/')
+@csrf_exempt
+@login_required(login_url='/sepakbola/login/')
 def show_history_rapat(request):
     context = {
     }
     return render(request, "pages/history-rapat.html", context)
 
-#@login_required(login_url='/sepakbola/login/')
+@csrf_exempt
+@login_required(login_url='/sepakbola/login/')
 def show_mengelola_tim(request):
     context = {
     }
     return render(request, "pages/mengelola-tim.html", context)
 
 
-#@login_required(login_url='/sepakbola/login/')
+@csrf_exempt
+@login_required(login_url='/sepakbola/login/')
 def show_dashboard_manajer(request):
     context = {
     }
     return render(request, "dashboard/dashboard-manajer.html", context)
 
-#@login_required(login_url='/sepakbola/login/')
+@csrf_exempt
+@login_required(login_url='/sepakbola/login/')
 def show_dashboard(request):
     context = {
     }
