@@ -21,6 +21,38 @@ def show_manage_pertandingan(request):
     }
     return render(request, "pages/manage-pertandingan.html", context)
 
+#@login_required(login_url='/sepakbola/login/')
+def show_pembuatan_pertandingan(request):
+    context = {
+    }
+    return render(request, "pages/pembuatan-pertandingan.html", context)
+
+#@login_required(login_url='/sepakbola/login/')
+def show_form_pemilihan_jadwal(request):
+    context = {
+    }
+    return render(request, "pages/form-pemilihan-jadwal.html", context)
+
+#@login_required(login_url='/sepakbola/login/')
+def show_form_pembuatan_pertandingan(request):
+    context = {
+    }
+    return render(request, "pages/form-pembuatan-pertandingan.html", context)
+
+# TODO: ini yang bener, sementara ga pake id dulu
+# #@login_required(login_url='/sepakbola/login/')
+# def show_peristiwa_tim(request, id):
+#     context = {
+#         "id": id
+#     }
+#     return render(request, "pages/peristiwa-tim.html", context)
+
+#@login_required(login_url='/sepakbola/login/')
+def show_peristiwa_tim(request):
+    context = {
+    }
+    return render(request, "pages/peristiwa-tim.html", context)
+
 @csrf_exempt
 @login_required(login_url='/sepakbola/login/')
 def show_peminjaman_stadium(request):
