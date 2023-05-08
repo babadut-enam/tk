@@ -51,6 +51,12 @@ def show_mengelola_tim(request):
 
 
 #@login_required(login_url='/sepakbola/login/')
+def show_dashboard_manajer(request):
+    context = {
+    }
+    return render(request, "dashboard/dashboard-manajer.html", context)
+
+#@login_required(login_url='/sepakbola/login/')
 def show_dashboard(request):
     context = {
     }
