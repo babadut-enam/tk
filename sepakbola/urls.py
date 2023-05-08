@@ -1,5 +1,6 @@
 from sepakbola.views import show_home, register, login_user, logout_user
-from sepakbola.views import show_peminjaman_stadium, show_dashboard, show_form_peminjaman_stadium, show_mengelola_tim, show_manage_pertandingan, show_peristiwa_tim, show_pembuatan_pertandingan
+from sepakbola.views import show_peminjaman_stadium, show_dashboard, show_form_peminjaman_stadium, show_mengelola_tim
+from sepakbola.views import show_manage_pertandingan, show_peristiwa_tim, show_pembuatan_pertandingan, show_form_pemilihan_jadwal, show_form_pembuatan_pertandingan
 from sepakbola.views import register_manajer_penonton, register_panitia, show_list_pertandingan
 from sepakbola.views import show_history_rapat, show_dashboard_manajer
 from django.urls import path
@@ -23,5 +24,7 @@ urlpatterns = [
     path('manage-pertandingan/', show_manage_pertandingan, name='manage-pertandingan'),
     path('pembuatan-pertandingan/', show_pembuatan_pertandingan, name='pembuatan-pertandingan'),
     path('manage-pertandingan/peristiwa-tim/', show_peristiwa_tim, name='peristiwa-tim'),
-    # path('manage-pertandingan/peristiwa-tim/<uuid:id>/', show_manage_pertandingan, name='peristiwa-tim'), ini yang bener tapi belum ada data jadi pake yang atas
+    # path('manage-pertandingan/peristiwa-tim/<uuid:id>/', show_manage_pertandingan, name='peristiwa-tim'), TODO: ini yang bener tapi belum ada data jadi pake yang atas
+    path('pembuatan-pertandingan/form-pemilihan-jadwal/', show_form_pemilihan_jadwal, name='form-pemilihan-jadwal'),
+    path('pembuatan-pertandingan/form-pembuatan-pertandingan/', show_form_pembuatan_pertandingan, name='form-pembuatan-pertandingan'),
 ]
