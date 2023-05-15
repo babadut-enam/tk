@@ -21,6 +21,38 @@ def show_manage_pertandingan(request):
     }
     return render(request, "pages/manage-pertandingan.html", context)
 
+#@login_required(login_url='/sepakbola/login/')
+def show_pembuatan_pertandingan(request):
+    context = {
+    }
+    return render(request, "pages/pembuatan-pertandingan.html", context)
+
+#@login_required(login_url='/sepakbola/login/')
+def show_form_pemilihan_jadwal(request):
+    context = {
+    }
+    return render(request, "pages/form-pemilihan-jadwal.html", context)
+
+#@login_required(login_url='/sepakbola/login/')
+def show_form_pembuatan_pertandingan(request):
+    context = {
+    }
+    return render(request, "pages/form-pembuatan-pertandingan.html", context)
+
+# TODO: ini yang bener, sementara ga pake id dulu
+# #@login_required(login_url='/sepakbola/login/')
+# def show_peristiwa_tim(request, id):
+#     context = {
+#         "id": id
+#     }
+#     return render(request, "pages/peristiwa-tim.html", context)
+
+#@login_required(login_url='/sepakbola/login/')
+def show_peristiwa_tim(request):
+    context = {
+    }
+    return render(request, "pages/peristiwa-tim.html", context)
+
 @csrf_exempt
 @login_required(login_url='/sepakbola/login/')
 def show_peminjaman_stadium(request):
@@ -55,6 +87,18 @@ def show_mengelola_tim(request):
     context = {
     }
     return render(request, "pages/mengelola-tim.html", context)
+
+#@login_required(login_url='/sepakbola/login/')
+def show_pilih_pemain(request):
+    context = {
+    }
+    return render(request, "pages/pilih-pemain.html", context)
+
+#@login_required(login_url='/sepakbola/login/')
+def show_pilih_pelatih(request):
+    context = {
+    }
+    return render(request, "pages/pilih-pelatih.html", context)
 
 @csrf_exempt
 @login_required(login_url='/sepakbola/login/')
@@ -137,3 +181,68 @@ def logout_user(request):
     response = HttpResponseRedirect(reverse('sepakbola:login'))
     response.delete_cookie('last_login')
     return response
+
+# dk start
+@login_required(login_url='/sepakbola/login/')
+def mulai_rapat(request):
+  user = request.user
+  context = {
+    }
+  return render(request, "pages/mulai_rapat.html", context)
+
+@login_required(login_url='/sepakbola/login/')
+def mulai_pertandingan(request):
+  user = request.user
+  context = {
+    }
+  return render(request, "pages/mulai_pertandingan.html", context)
+
+@login_required(login_url='/sepakbola/login/')
+def form_isi_rapat(request):
+  user = request.user
+  context = {
+    }
+  return render(request, "pages/form_isi_rapat.html", context)
+
+@login_required(login_url='/sepakbola/login/')
+def tim1_peristiwa(request):
+  user = request.user
+  context = {
+    }
+  return render(request, "pages/tim1_peristiwa.html", context)
+
+@login_required(login_url='/sepakbola/login/')
+def tim2_peristiwa(request):
+  user = request.user
+  context = {
+    }
+  return render(request, "pages/tim2_peristiwa.html", context)
+
+@login_required(login_url='/sepakbola/login/')
+def pembelian_tiket(request):
+  user = request.user
+  context = {
+    }
+  return render(request, "pages/pembelian_tiket.html", context)
+
+@login_required(login_url='/sepakbola/login/')
+def pembelian_tiket2(request):
+  user = request.user
+  context = {
+    }
+  return render(request, "pages/pembelian_tiket2.html", context)
+
+@login_required(login_url='/sepakbola/login/')
+def pembelian_tiket3(request):
+  user = request.user
+  context = {
+    }
+  return render(request, "pages/pembelian_tiket3.html", context)
+
+@login_required(login_url='/sepakbola/login/')
+def pembelian_tiket4(request):
+  user = request.user
+  context = {
+    }
+  return render(request, "pages/pembelian_tiket4.html", context)
+# dk end
