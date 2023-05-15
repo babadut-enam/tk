@@ -56,6 +56,13 @@ def show_mengelola_tim(request):
     }
     return render(request, "pages/mengelola-tim.html", context)
 
+@csrf_exempt
+@login_required(login_url='/sepakbola/login/')
+def show_list_waktu_stadium_sketch(request):
+    context = {
+    }
+    return render(request, "pages/list-waktu-stadium.html", context)
+
 
 @csrf_exempt
 @login_required(login_url='/sepakbola/login/')
